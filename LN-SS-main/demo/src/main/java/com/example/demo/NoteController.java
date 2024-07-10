@@ -12,7 +12,6 @@ public class NoteController {
         this.noteRepository = noteRepository;
     }
 
-
     @GetMapping("/note/{title}")
     public List<NoteEntity> getNote(@PathVariable String title) {
         return noteRepository.findAllByTitle(title);
