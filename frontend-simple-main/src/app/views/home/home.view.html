@@ -1,4 +1,5 @@
 <div class="input-container">
+    <h2>Enter last name of full name: </h2>
     <input type="text" [ngModel]="name" (ngModelChange)="nameChanged($event)" />
     <input type="button" (click)="fetchResults()" value="Search" />
 </div>

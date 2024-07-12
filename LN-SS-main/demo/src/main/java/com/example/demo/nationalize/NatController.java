@@ -71,12 +71,16 @@ public class NatController {
             String chat3 =  chatModel.call("Tell me 10 basic and simple phrases in the language used in " + fullCountryName + ". Please just list them without any text before");
             logger.info("Chat done");
 
+            String formattedChat = chat.replace("\n", "<br>");
+            String formattedChat2 = chat2.replace("\n", "<br>");
+            String formattedChat3 = chat3.replace("\n", "<br>");
+
             chatGPTCall.increment();
             Map<String, String> jsonObject = new HashMap<>();
             jsonObject.put("headline", headline);
-            jsonObject.put("prompt1", chat);
-            jsonObject.put("prompt2", chat2);
-            jsonObject.put("prompt3", chat3);
+            jsonObject.put("prompt1", formattedChat);
+            jsonObject.put("prompt2", formattedChat2);
+            jsonObject.put("prompt3", formattedChat3);
             jsonObject.put("wiki", wikipedia);
             //
             // Return the map, which will be automatically converted to JSON by Spring Boot
