@@ -3,6 +3,7 @@ import { CountryData } from "../../types/countryData";
 import { HttpClient } from "@angular/common/http";
 import { NOTES_BASE_URL } from "../../app.config";
 
+
 @Component({
     templateUrl: './home.view.html',
     styleUrls: ['./home.view.less'],

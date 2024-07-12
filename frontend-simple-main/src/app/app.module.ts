@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutView } from './views/about/about.view';
 import { HomeView } from './views/home/home.view'
 import { NoteView } from './views/note/note.view';
+import { SafeHtml } from './pipes/safe-html.pipe';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { NoteView } from './views/note/note.view';
         AboutView,
         HeaderComponent,
         FooterComponent,
+        SafeHtml,
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

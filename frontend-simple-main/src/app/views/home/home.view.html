@@ -1,5 +1,6 @@
+
 <div class="input-container">
-    <h2>Enter last name of full name: </h2>
+    <h3>Enter last name of full name: </h3>
     <input type="text" [ngModel]="name" (ngModelChange)="nameChanged($event)" />
     <input type="button" (click)="fetchResults()" value="Search" />
 </div>
@@ -13,17 +14,17 @@
     <div class="h3-container">
         <div>
             <h3>Interesting Facts</h3>
-            <p [innerHTML] >{{ countryData.prompt1 }}</p>
+            <p [innerHTML]="countryData.prompt1 | safeHTML"></p>
         </div>
         
         <div>
             <h3>Popular Jokes</h3>
-            <p [innerHTML] >{{ countryData.prompt2 }}</p>
+            <p [innerHTML]="countryData.prompt2 | safeHTML" ></p>
         </div>
         
         <div>
             <h3>Basic Phrases</h3>
-            <p [innerHTML] >{{ countryData.prompt3 }}</p>
+            <p [innerHTML]="countryData.prompt3 | safeHTML"></p>
         </div>
     </div>
     
