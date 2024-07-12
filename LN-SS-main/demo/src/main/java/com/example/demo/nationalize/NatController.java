@@ -68,7 +68,7 @@ public class NatController {
             chatGPTCall.increment();
             String chat2 =  chatModel.call("Give me 3 jokes most used in " + fullCountryName + ". Please just list them without any text before" );
             chatGPTCall.increment();
-            String chat3 =  chatModel.call("Tell me 10 basic and simple phrases in the language used in " + fullCountryName + ". Please just list them without any text before");
+            String chat3 =  chatModel.call("Tell me 10 basic and simple phrases in the language used in " + fullCountryName + " and their english translations. Please just list them without any text before");
             logger.info("Chat done");
 
             String formattedChat = chat.replace("\n", "<br>");
