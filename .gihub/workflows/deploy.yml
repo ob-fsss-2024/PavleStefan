@@ -20,7 +20,7 @@ jobs:
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          appSourcePath: ${{ github.workspace }}
+          appSourcePath: ${{ github.workspace }}/LN-SS-main
           acrName: zemregistry
           containerAppName: PavleStefan
           resourceGroup: ob-fsss-2024
