@@ -1,0 +1,36 @@
+<div class="input-container">
+    <input type="text" [ngModel]="name" (ngModelChange)="nameChanged($event)" />
+    <input type="button" (click)="fetchResults()" value="Search" />
+</div>
+
+<ng-container *ngIf="countryData">
+    <div>
+        <h2>Nationality</h2>
+        <p>{{ countryData.headline }}</p>
+    </div>
+    
+    <div class="h3-container">
+        <div>
+            <h3>Interesting Facts</h3>
+            <p>{{ countryData.prompt1 }}</p>
+        </div>
+        
+        <div>
+            <h3>Popular Jokes</h3>
+            <p>{{ countryData.prompt2 }}</p>
+        </div>
+        
+        <div>
+            <h3>Basic Phrases</h3>
+            <p>{{ countryData.prompt3 }}</p>
+        </div>
+    </div>
+    
+    <div class="wiki">
+        <h4>Wiki Information</h4>
+        <p>{{ countryData.wiki }}</p>
+    </div>
+</ng-container>
+
+
+
