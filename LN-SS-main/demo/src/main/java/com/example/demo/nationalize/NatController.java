@@ -58,7 +58,7 @@ public class NatController {
             String wikipedia;
             logger.info("Wiki start");
             if (!wikipediaDataList.isEmpty()) {
-                wikipedia = wikipediaDataList.get(0).auxiliary_text();
+                wikipedia = wikipediaDataList.get(0).opening_text();
             } else {
                 wikipedia = "No data";
             }
