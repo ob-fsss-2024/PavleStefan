@@ -22,5 +22,5 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}/LN-SS-main/demo
           acrName: zemregistry
-          containerAppName: PavleStefan
+          containerAppName: backend-pavlestefan
           resourceGroup: ob-fsss-2024
